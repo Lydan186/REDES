@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  UsuarioID     Int       @id(map: "PK__Usuario__2B3DE7987251937A") @default(autoincrement())
+  NombreUsuario String?   @db.NVarChar(100)
+  Contrase_a    String?   @map("Contraseña") @db.NVarChar(100)
+  FechaRegistro DateTime? @default(now(), map: "DF__Usuario__FechaRe__49C3F6B7") @db.DateTime
+}
