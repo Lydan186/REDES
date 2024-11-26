@@ -6,12 +6,9 @@ import { UsersTableSkeleton } from '@/app/ui/skeletons';
 import { fetchUsuarios } from '@/app/lib/data'; // Asegúrate de importar fetchUsuarios correctamente
 
 export default async function Page({
-  searchParams,
+  
 }: {
-  searchParams?: {
-    query?: string;
-    page?: string;
-  };
+
 }) {
 
   // Obtener usuarios de la base de datos
